@@ -1,0 +1,29 @@
+{
+  "name": "tiles-middleware-station",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "nodemon": "^1.11.0",
+    "supertest": "^2.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.16.0",
+    "koa": "next",
+    "koa-mount": "next",
+    "koa-router": "next",
+    "koa-static": "next",
+    "lodash": "^4.16.6"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
