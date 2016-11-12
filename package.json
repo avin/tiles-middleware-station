@@ -1,29 +1,57 @@
 {
   "name": "tiles-middleware-station",
+  "description": "Proxy server for map-tiles services with additional features",
   "version": "1.0.0",
+  "author": "Avin Grape",
+  "license": "MIT",
+  "keywords": [
+    "proxy",
+    "tiles",
+    "map"
+  ],
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev-server": "nodemon --exec node index.js",
+    "dev-client": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config client/webpack/webpack.dev.config.js --progress --colors",
+    "build-server": "babel server/src -d server/build",
+    "build-client": "webpack --config client/webpack/webpack.prod.config.js --progress --colors"
+  },
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "cross-env": "^3.1.3",
+    "css-loader": "^0.25.0",
+    "koa": "^2.0.0",
+    "koa-mount": "^2.0.0",
+    "koa-router": "^7.0.1",
+    "koa-static": "^3.0.0",
+    "leaflet": "^1.0.0",
+    "lodash": "^4.16.6",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-leaflet": "^1.0.0-rc.3",
+    "webpack": "^1.13.3"
+  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "chai": "^3.5.0",
     "mocha": "^3.1.2",
     "nodemon": "^1.11.0",
-    "supertest": "^2.0.1"
+    "supertest": "^2.0.1",
+    "webpack-dev-server": "^1.16.2"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "babel-polyfill": "^6.16.0",
-    "koa": "next",
-    "koa-mount": "next",
-    "koa-router": "next",
-    "koa-static": "next",
-    "lodash": "^4.16.6"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "babel": {
+    "presets": [
+      "react",
+      "es2015",
+      "stage-0"
+    ]
+  }
 }
