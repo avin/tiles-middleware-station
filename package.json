@@ -34,6 +34,7 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-leaflet": "^1.0.0-rc.3",
+    "requestretry": "^1.12.0",
     "webpack": "^1.13.3"
   },
   "devDependencies": {
